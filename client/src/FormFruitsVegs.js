@@ -75,14 +75,14 @@ export default class FormFruitsVegs extends Component {
                    <div className="card card-body">
                    <h5>TOTAL</h5>
                    {this.state.itemList.map((item, index) => (
-           <p> key={index}>{item.fruits}{item.vegetables}</p>
+           <p> key={item.index}{item.vegetables}{item.vegetables}</p>
         )).length}
 
 </div>
 
 <ul className="mt-4 list-group">
         {this.state.itemList.map((item, index) => (
-           <li className="list-group-item font-weight-bold ml-4"key={index}>{item.fruits}{item.vegetables}</li>
+           <li className="list-group-item font-weight-bold ml-4"key={item.fruits}>{item.fruits}{item.vegetables}</li>
            ))}
  </ul>
 

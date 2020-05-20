@@ -1,4 +1,16 @@
 .App {
-    text-align: center;
+    
+    min-height: 100vh;
 }
+
+
+/* li {
+   
+    flex-grow: 1;
+    font-size: 150%;
+    list-style: none; 
+    color: black;
+    text-decoration: none;
+} */
+
 
