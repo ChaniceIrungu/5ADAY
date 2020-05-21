@@ -1,16 +1,27 @@
 .App {
     
     min-height: 100vh;
+   
 }
 
 
-/* li {
-   
-    flex-grow: 1;
-    font-size: 150%;
-    list-style: none; 
-    color: black;
-    text-decoration: none;
-} */
 
 
+.nutrition {
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px black;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: white;
+    align-items: center;
+    min-width: 40%;
+    
+    
+}
+
+nav {
+
+    text-align: center;
+}

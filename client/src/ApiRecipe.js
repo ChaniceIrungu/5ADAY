@@ -44,9 +44,11 @@ const getSearch = e => {
   return(
 
     <div className="App">
+      <div className="bg-light">
+      <div className="container">
       
-       <form onSubmit={getSearch}className="container">
-         <input className="mt-4 form-control" type="text" value={search} onChange={updateSearch}/>
+       <form onSubmit={getSearch}>
+         <textarea className="mt-4 form-control" type="text" rows="4" cols="50" placeholder="Ingredients list" value={search} onChange={updateSearch}/>
   <button className="mt-4 mb-4 btn btn-info form-control" type="submit">Search</button>
        </form>
        <div className="recipes">
@@ -57,6 +59,8 @@ const getSearch = e => {
           ingredients={recipe.recipe.ingredients}calories={recipe.recipe.calories}
           />
         ))}
+        </div>
+        </div>
         </div>
     </div>
   )

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import Nutrition from './Nutrition'
+import './App.css';
 
 const API_ID = "27bc3ecd"
 const API_KEY = "337d6212019594982a23a1e7c2f1078a"
@@ -43,11 +44,13 @@ const getSubmit = e => {
 
     return(
 
-        <div>
+        <div className="bg-light">
 
-            <form className="container text-center" onSubmit={getSubmit}>
-                <input classname="form-control" type="text" placeholder="CALORIES"value={ingr} onChange={updateSubmit}/>
-                <button classname="form-control" type="submit">Submit</button>
+            <div className="container">
+             <h5 className="mt-4">Fruits & Vegs</h5>
+            <form className="text-center" onSubmit={getSubmit}>
+                <textarea className="form-control mt-4" type="text" placeholder="Ingredients list" rows="4" cols="50" value={ingr} onChange={updateSubmit}/>
+                <button className="form-control mt-4 btn btn-info" type="submit">ANALYZE</button>
             </form>
 
             {Object.keys(nutritions).map(key => (<Nutrition 
@@ -56,7 +59,7 @@ const getSubmit = e => {
             unit={nutritions[key].unit}
             
             />))}
-           
+           </div>
             </div>
   
     )
