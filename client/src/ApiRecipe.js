@@ -25,13 +25,6 @@ useEffect(  () => {
     getRecipes();
   }, [query, ]);
 
-// const getRecipes = async () => {
-//     const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
-//     const data = await response.json();
-//     setRecipes(data.hits);
-//     console.log(data.hits);
-    
-//  }
 
 const updateSearch = e =>  {
   setSearch(e.target.value);
@@ -51,7 +44,7 @@ const getSearch = e => {
       
        <form onSubmit={getSearch}className="container">
          <input className="mt-4 form-control" type="text" value={search} onChange={updateSearch}/>
-  <button className="mt-4 mb-4 btn btn-primary form-control" type="submit">Search</button>
+  <button className="mt-4 mb-4 btn btn-info form-control" type="submit">Search</button>
        </form>
        <div className="recipes">
         {recipes.map(recipe => (
