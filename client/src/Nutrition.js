@@ -6,11 +6,11 @@ const Nutrition = ({label, quantity, unit}) => {
 
 
   return(
-      <div>
+      <div className="text-center mt-4">
         <p>{label}</p>
   <p>{quantity}</p>
   <p>{unit}</p>
-      </div>
+    </div>
   )
 
 

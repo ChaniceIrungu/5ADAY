@@ -11,30 +11,42 @@ const ApiNutrition = () => {
 
 
 const [nutritions, setNutritions] = useState([])
+const [ingr, setSubmit] = useState('')
+const [inquiry, setInquiry] = useState('1 apple')
 
 useEffect( () => {
-  
+
+    const getNutritions = async () => {
+        const response = await fetch(`https://api.edamam.com/api/nutrition-data?app_id=${API_ID}&app_key=${API_KEY}&ingr=${inquiry}`)
+        const data = await response.json();
+        setNutritions(data.totalNutrients)
+        console.log(data.totalNutrients);
+     
+    }
     
    getNutritions();
-}, [])
+}, [inquiry])
 
-const getNutritions = async () => {
-    const response = await fetch(`https://api.edamam.com/api/nutrition-data?app_id=${API_ID}&app_key=${API_KEY}&ingr=1%20large%20apple`)
-    const data = await response.json();
-    setNutritions(data.totalNutrients)
-    console.log(data.totalNutrients);
- 
+
+const updateSubmit = e => {
+    setSubmit(e.target.value)
+    // console.log(ingr)
 }
 
-// .totalNutrientsKCal
+const getSubmit = e => {
+
+  e.preventDefault();
+  setInquiry(ingr)
+
+}
 
 
     return(
 
         <div>
 
-            <form className="container text-center">
-                <input classname="form-control" type="text" placeholder="CALORIES"/>
+            <form className="container text-center" onSubmit={getSubmit}>
+                <input classname="form-control" type="text" placeholder="CALORIES"value={ingr} onChange={updateSubmit}/>
                 <button classname="form-control" type="submit">Submit</button>
             </form>
 
