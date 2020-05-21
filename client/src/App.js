@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 
 
-// import NavBar from './NavBar';
+
 // import FormFruitsVegs from './FormFruitsVegs';
 import ApiRecipe from './ApiRecipe';
 import ApiNutrition from './ApiNutrition';
@@ -55,7 +55,7 @@ render() {
     <div className="App">
 
       <div className="text-center bg-light">
-      {/* <NavBar /> */}
+  
 
 <img src={image} alt="" />
 
