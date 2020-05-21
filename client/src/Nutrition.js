@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Nutrition = ({label}) => {
+const Nutrition = ({label, quantity, unit}) => {
 
 
 
@@ -8,8 +8,8 @@ const Nutrition = ({label}) => {
   return(
       <div>
         <p>{label}</p>
-        <p>Quantity</p>
-        <p>Unit</p>
+  <p>{quantity}</p>
+  <p>{unit}</p>
       </div>
   )
 

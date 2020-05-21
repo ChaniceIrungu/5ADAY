@@ -21,10 +21,12 @@ useEffect( () => {
 const getNutritions = async () => {
     const response = await fetch(`https://api.edamam.com/api/nutrition-data?app_id=${API_ID}&app_key=${API_KEY}&ingr=1%20large%20apple`)
     const data = await response.json();
-    setNutritions(data.totalNutrientsKCal)
-    console.log(data.totalNutrientsKCal);
+    setNutritions(data.totalNutrients)
+    console.log(data.totalNutrients);
  
 }
+
+// .totalNutrientsKCal
 
 
     return(
@@ -37,7 +39,9 @@ const getNutritions = async () => {
             </form>
 
             {Object.keys(nutritions).map(key => (<Nutrition 
-            // label={key.ENERC_KCA.label}
+            label={nutritions[key].label}
+            quantity={nutritions[key].quantity}
+            unit={nutritions[key].unit}
             
             />))}
            
