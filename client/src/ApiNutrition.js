@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import Nutrition from './Nutrition'
+import Donut from './Donut'
 import './App.css';
 
 const API_ID = "27bc3ecd"
@@ -60,6 +61,7 @@ const getSubmit = e => {
             
             />))}
            </div>
+           <Donut />
             </div>
   
     )
