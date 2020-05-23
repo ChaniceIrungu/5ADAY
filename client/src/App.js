@@ -12,7 +12,6 @@ import {
 // import FormFruitsVegs from './FormFruitsVegs';
 import ApiRecipe from './ApiRecipe';
 import ApiNutrition from './ApiNutrition';
-import Donut from './Donut';
 
 const header = "5 Daily and more... Reach your Goal";
 const image = "https://s.yimg.com/ny/api/res/1.2/UYVqvhuvJILX8ZwNmKv3vA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQyNy4xMzA0MzQ3ODI2MDg3/https://s.yimg.com/uu/api/res/1.2/DHKgUr4Y2ZVMFXRFU8BSiw--~B/aD00OTEyO3c9NzM2MDtzbT0xO2FwcGlkPXl0YWNoeW9u/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-images/2019-11/52156a40-febd-11e9-bd15-10cdaf10fa92";
@@ -40,10 +39,10 @@ render() {
        <Link to="/home" className="nav-link">Home</Link>
       </li>
       <li className="nav-item">
-      <Link to="/fruits" className="nav-link">Fruits & Vegs</Link>
+      <Link to="/nutrition" className="nav-link">Nutrition</Link>
       </li>
       <li className="nav-item">
-      <Link to="/daily" className="nav-link">Daily Ideas</Link>
+      <Link to="/recipes" className="nav-link">Recipes</Link>
       </li>
       <li className="nav-item">
       <Link to="/tips" className="nav-link">Tips & News</Link>
@@ -68,11 +67,14 @@ render() {
       
       {/* <FormFruitsVegs /> */}
      <Switch>
-       <Route path="/daily">
+       <Route path="/home">
+       
+       </Route>
+       <Route path="/recipes">
       <ApiRecipe className="container bg-light" />
       </Route>
       
-      <Route path="/fruits">
+      <Route path="/nutrition">
       <ApiNutrition />
       </Route>
       

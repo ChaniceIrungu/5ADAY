@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import Nutrition from './Nutrition'
+// import Nutrition from './Nutrition'
 import Donut from './Donut'
 import './App.css';
 
@@ -47,22 +47,22 @@ const getSubmit = e => {
 
         <div className="bg-light">
 
-            <div className="container">
-             <h5 className="mt-4">Fruits & Vegs</h5>
-            <form className="text-center" onSubmit={getSubmit}>
-                <textarea className="form-control mt-4" type="text" placeholder="Ingredients list" rows="4" cols="50" value={ingr} onChange={updateSubmit}/>
-                <button className="form-control mt-4 btn btn-info" type="submit">ANALYZE</button>
-            </form>
+        <div className="container">
+         <h5 className="mt-4">Nutrition</h5>
+        <form className="text-center" onSubmit={getSubmit}>
+            <textarea className="form-control mt-4" type="text" placeholder="Ingredients list" rows="4" cols="50" value={ingr} onChange={updateSubmit}/>
+            <button className="form-control mt-4 btn btn-info" type="submit">ANALYZE</button>
+        </form>
 
-            {Object.keys(nutritions).map(key => (<Nutrition 
-            label={nutritions[key].label}
-            quantity={nutritions[key].quantity}
-            unit={nutritions[key].unit}
-            
-            />))}
-           </div>
-           <Donut />
-            </div>
+        {Object.keys(nutritions).map(key => (<Donut
+        label={nutritions[key].label}
+        quantity={nutritions[key].quantity}
+        unit={nutritions[key].unit}
+        
+        />))}
+       </div>
+      
+        </div>
   
     )
 }
