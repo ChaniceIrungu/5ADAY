@@ -58,14 +58,27 @@ const getSubmit = e => {
 
        
 
-        {Object.keys(nutritions).map(key => (<Nutrition
-        label={nutritions[key].label}
-        quantity={nutritions[key].quantity}
-        unit={nutritions[key].unit}
-        
-        />))}
+        {
+    Object.keys(nutritions).map(key => 
+        ['ENERC_KCAL', 'FAT', 'CHOCDF', 'PROCNT'].includes(key) && 
+        (
+            <Nutrition
+                label={nutritions[key].label}
+                quantity={nutritions[key].quantity}
+                unit={nutritions[key].unit}
+            />
+        )
+    )
+} 
 
-<Nutrition nutritions={nutritions} />
+  
+  
+  
+
+
+
+
+     
 
 
 
