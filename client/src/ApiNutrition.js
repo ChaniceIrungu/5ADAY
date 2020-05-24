@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react'
-// import Nutrition from './Nutrition'
+import Nutrition from './Nutrition'
 import Donut from './Donut'
 import './App.css';
 
-const API_ID = "27bc3ecd"
-const API_KEY = "337d6212019594982a23a1e7c2f1078a"
+const API_ID = "a3b27ad9"
+const API_KEY = "99c842cbb72db8ad195589bb293374db	"
 
 
 const ApiNutrition = () => {
@@ -43,6 +43,8 @@ const getSubmit = e => {
 }
 
 
+
+
     return(
 
         <div className="bg-light">
@@ -54,12 +56,20 @@ const getSubmit = e => {
             <button className="form-control mt-4 btn btn-info" type="submit">ANALYZE</button>
         </form>
 
-        {Object.keys(nutritions).map(key => (<Donut
+       
+
+        {Object.keys(nutritions).map(key => (<Nutrition
         label={nutritions[key].label}
         quantity={nutritions[key].quantity}
         unit={nutritions[key].unit}
         
         />))}
+
+<Nutrition nutritions={nutritions} />
+
+
+
+        <Donut />
        </div>
       
         </div>

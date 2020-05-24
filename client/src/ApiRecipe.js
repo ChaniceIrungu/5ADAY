@@ -5,8 +5,8 @@ import Recipe from "./Recipe"
 
 const Api = () => {
 
-const APP_ID = "f306dbf4";
-const APP_KEY = "b44d9e2b3d833c866f2104b0189893a7";
+  const APP_ID = "f306dbf4";
+  const APP_KEY = "b44d9e2b3d833c866f2104b0189893a7";
 
 const [recipes, setRecipes] = useState([]);
 const [search, setSearch] = useState('');

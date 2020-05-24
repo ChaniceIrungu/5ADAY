@@ -1,8 +1,33 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### Introduction
+
+The app is designed for users who wants to eat better and have a better lifestyle. The users are able to track their nutritions and calories with the choosen ingredients, and they will also get a recipe and tips to have to be able to relax and improve their lifestyle. Feature will include a dashboard where the users can save the nutrition and calories data.
+
 ## Available Scripts
 
 In the project directory, you can run:
+
+### Dependencies
+
+Run yarn on root folder to install dependencies related to Express.
+
+cd client and run yarn install dependencies related to React.
+
+### Run Your Development Servers
+
+Run yarn start in project directory to start the Express server on port 5000.
+
+cd client and run yarn start to start the client server.
+
+Open http://localhost:3000 to view the client in the browser.
+
+Open http://localhost:5000 to view the data in the browser.
+
+### Database layout
+
+
+
 
 ### `yarn start`
 

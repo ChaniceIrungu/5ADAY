@@ -6,7 +6,7 @@ import {Doughnut} from 'react-chartjs-2';
 
 
 const Donut = () => {
-
+//  console.log(nutritions)
 
   const state = {
   
