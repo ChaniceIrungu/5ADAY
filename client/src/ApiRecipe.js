@@ -46,10 +46,10 @@ const getSearch = e => {
     <div className="App">
       <div className="bg-light">
       <div className="container">
-      
+      <h5>Get your recipe</h5>
        <form onSubmit={getSearch}>
          <textarea className="mt-4 form-control" type="text" rows="4" cols="50" placeholder="Ingredients list" value={search} onChange={updateSearch}/>
-  <button className="mt-4 mb-4 btn btn-info form-control" type="submit">Search</button>
+  <button className="mt-4 btn btn-info form-control" type="submit">Search</button>
        </form>
        <div className="recipes">
         {recipes.map(recipe => (

@@ -50,15 +50,15 @@ const getSubmit = e => {
         <div className="bg-light">
 
         <div className="container">
-         <h5 className="mt-4">Nutrition</h5>
+         <h5>Track your nutrition</h5>
         <form className="text-center" onSubmit={getSubmit}>
-            <textarea className="form-control mt-4" type="text" placeholder="Ingredients list" rows="4" cols="50" value={ingr} onChange={updateSubmit}/>
+            <textarea className="form-control mt-4" type="text" placeholder="Fruits & Vegetables" rows="4" cols="50" value={ingr} onChange={updateSubmit}/>
             <button className="form-control mt-4 btn btn-info" type="submit">ANALYZE</button>
         </form>
 
        
 
-        {
+         {
     Object.keys(nutritions).map(key => 
         ['ENERC_KCAL', 'FAT', 'CHOCDF', 'PROCNT'].includes(key) && 
         (
@@ -69,20 +69,8 @@ const getSubmit = e => {
             />
         )
     )
-} 
-
-  
-  
-  
-
-
-
-
-     
-
-
-
-        <Donut />
+}  
+             <Donut />
        </div>
       
         </div>

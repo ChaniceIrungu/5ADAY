@@ -34,7 +34,7 @@ return (
       <Link to="/recipes" className="nav-link">Recipes</Link>
       </li>
       <li className="nav-item">
-      <Link to="/tips" className="nav-link">Tips & News</Link>
+      <Link to="/season" className="nav-link">Seasons</Link>
       </li>
      
     </ul>

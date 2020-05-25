@@ -6,14 +6,14 @@ import {Doughnut} from 'react-chartjs-2';
 
 
 const Donut = () => {
-//  console.log(nutritions)
+
 
   const state = {
   
     labels: [],
     datasets: [
       {
-        label: 'nutrition',
+        label: 'Nutrition',
         backgroundColor: [
           '#B21F00',
           '#C9DE00',
@@ -29,13 +29,15 @@ const Donut = () => {
       //   '#35014F'
         ],
         data: [45, 25, 20, 10]
+        
       }
     ]
   }
-
+  
   return (
     <div>
-     
+      
+   
 
       <Doughnut
         data={state}
@@ -54,11 +56,13 @@ const Donut = () => {
         
       />
     </div>
+ 
+
   )
-      }
+      
+      
 
-
-   
+    }
   
    
 

@@ -12,6 +12,7 @@ import ApiRecipe from './ApiRecipe';
 import ApiNutrition from './ApiNutrition';
 import Home from './Home';
 import NavBar from './NavBar';
+import ApiSeason from './ApiSeason';
 
 
 
@@ -39,6 +40,10 @@ return (
        
        <Route path="/nutrition">
        <ApiNutrition />
+       </Route>
+
+       <Route path="/season">
+       <ApiSeason />
        </Route>
        
        </Switch>
