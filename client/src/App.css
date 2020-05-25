@@ -27,19 +27,25 @@ nav {
     text-align: center;
 }
 
-/* .season {
-    border-radius: 10px;
-    box-shadow: 0px 5px 20px rgb(71,71,71);
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: white;
-    align-items: center;
-    min-width: 40%;
-
-} */
+.list {
+    display: block;
+    float: left;
+    position: relative;
+    margin-left:10px;
+   
+}
 
 .title {
-color: lightskyblue
+color: turquoise;
+font-size: 30px
+}
+
+.header {
+    /* margin: auto; */
+    width: 100%;
+    position: absolute;
+    padding: 5%;
+   
+    font-size: 50px;
+   
 }

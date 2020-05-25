@@ -1,18 +1,26 @@
-import React, { Component } from 'react'
+import React from 'react'
+import './App.css';
 
 const Season = ({image, title, description, list}) => {
 
 return (
 
-<div className="season">
+<div>
 
-<img className={image} src={image} alt=""/>
-<h5 className="title">{title}</h5>
-<p>{description}</p>
+<div className="card">
+   
+    <div className="card-body">
+<h5 className="card-title title">{title}</h5>
+<p className="card-text">{description}</p>
+<img className="card-img-top" src={image} alt=""/>
 
-<ul>
-<li><bold>{list}</bold></li>
-</ul>
+      <ul className="card-text mt-4"><li>{list.replace(/,/g," ")}</li>
+      </ul>
+    </div>
+  </div>
+ 
+
+
  
 </div>
 

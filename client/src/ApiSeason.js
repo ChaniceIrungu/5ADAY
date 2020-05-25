@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component }from 'react'
 import Season from './Season';
 
 export default class ApiSeason extends Component {
@@ -26,7 +26,7 @@ export default class ApiSeason extends Component {
             <div className="season">
                 
                 <div>
-                   {users.map((season) => (
+                   {users.map(season => (
                        <Season
                      image={season.image} 
                      title= {season.title} 
@@ -34,7 +34,7 @@ export default class ApiSeason extends Component {
                        list={season.list} 
                     />
                    ))}
-                </div>>
+                </div>
             </div>
         )
     }

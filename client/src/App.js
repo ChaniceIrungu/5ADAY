@@ -34,6 +34,11 @@ return (
         <Route path="/home">
         <Home />
         </Route>
+
+       <Route path="/season">
+       <ApiSeason />
+       </Route>
+       
         <Route path="/recipes">
        <ApiRecipe className="container bg-light" />
        </Route>
@@ -42,9 +47,6 @@ return (
        <ApiNutrition />
        </Route>
 
-       <Route path="/season">
-       <ApiSeason />
-       </Route>
        
        </Switch>
       

@@ -28,14 +28,15 @@ return (
        <Link to="/home" className="nav-link">Home</Link>
       </li>
       <li className="nav-item">
+      <Link to="/season" className="nav-link">Seasons</Link>
+      </li>
+      <li className="nav-item">
       <Link to="/nutrition" className="nav-link">Nutrition</Link>
       </li>
       <li className="nav-item">
       <Link to="/recipes" className="nav-link">Recipes</Link>
       </li>
-      <li className="nav-item">
-      <Link to="/season" className="nav-link">Seasons</Link>
-      </li>
+      
      
     </ul>
   </div>
