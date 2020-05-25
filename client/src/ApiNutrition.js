@@ -60,7 +60,7 @@ const getSubmit = e => {
 
          {
     Object.keys(nutritions).map(key => 
-        ['ENERC_KCAL', 'FAT', 'CHOCDF', 'PROCNT'].includes(key) && 
+        ['ENERC_KCAL'].includes(key) && 
         (
             <Nutrition
                 label={nutritions[key].label}
@@ -70,7 +70,7 @@ const getSubmit = e => {
         )
     )
 }  
-             <Donut />
+             <Donut data={[nutritions.FAT, nutritions.CHOCDF, nutritions.PROCNT]} />
        </div>
       
         </div>

@@ -38,6 +38,22 @@ return (
        <Route path="/season">
        <ApiSeason />
        </Route>
+
+       <Route path="/spring">
+       <ApiSeason />
+       </Route>
+
+       <Route path="/summer">
+       <ApiSeason />
+       </Route>
+
+       <Route path="/autumn">
+       <ApiSeason />
+       </Route>
+
+       <Route path="/winter">
+       <ApiSeason />
+       </Route>
        
         <Route path="/recipes">
        <ApiRecipe className="container bg-light" />

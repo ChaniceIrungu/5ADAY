@@ -13,11 +13,11 @@ const NavBar = () => {
 
 return (
 
-  
-    <div>
+  <div>
+    
 
 
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+         <nav className="navbar navbar-expand-lg navbar-light bg-light">
   
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
@@ -27,9 +27,22 @@ return (
       <li className="nav-item active">
        <Link to="/home" className="nav-link">Home</Link>
       </li>
-      <li className="nav-item">
-      <Link to="/season" className="nav-link">Seasons</Link>
+      
+    
+      <li className="nav-item dropdown">
+        <Link to="/season" className="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Seasons
+        </Link>
+        <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <Link to="/spring"className="dropdown-item" >Spring</Link>
+          <Link to="/summer" className="dropdown-item" >Summer</Link>
+          <Link to="/autumn" className="dropdown-item" >Autumn</Link>
+          <Link to="/winter" className="dropdown-item" >Winter</Link>
+        </div>
       </li>
+     
+       
+     
       <li className="nav-item">
       <Link to="/nutrition" className="nav-link">Nutrition</Link>
       </li>
@@ -37,12 +50,16 @@ return (
       <Link to="/recipes" className="nav-link">Recipes</Link>
       </li>
       
+
+     
+
+
      
     </ul>
   </div>
   
-</nav>
-    </div>
+</nav> 
+   </div>
    
  
 )

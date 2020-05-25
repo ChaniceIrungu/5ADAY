@@ -5,12 +5,12 @@ import {Doughnut} from 'react-chartjs-2';
 
 
 
-const Donut = () => {
+const Donut = ({data}) => {
 
 
   const state = {
   
-    labels: [],
+    labels: data.map(e => (e?.label)),
     datasets: [
       {
         label: 'Nutrition',
@@ -28,7 +28,7 @@ const Donut = () => {
         '#ffce56',
       //   '#35014F'
         ],
-        data: [45, 25, 20, 10]
+        data: data.map(e => (e?.quantity))
         
       }
     ]
