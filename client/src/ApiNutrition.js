@@ -68,9 +68,9 @@ const getSubmit = e => {
                 unit={nutritions[key].unit}
             />
         )
-    )
+    )          
 }  
-             <Donut data={[nutritions.FAT, nutritions.CHOCDF, nutritions.PROCNT]} />
+             <Donut data={[nutritions.FAT, nutritions.CHOCDF, nutritions.PROCNT, nutritions.SUGAR, nutritions.FASAT, nutritions.FIBTG]} />
        </div>
       
         </div>

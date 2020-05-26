@@ -5,7 +5,7 @@ export default class ApiSeason extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            users: [],
+            season: {},
         }
     }
 
@@ -14,27 +14,29 @@ export default class ApiSeason extends Component {
     }
 
     getSeason = () => {
-        fetch(`/users`)
+        fetch(`/users/${this.props.id}`)
         .then(response => response.json())
         .then(response => {
-            this.setState({ users: response})
+            this.setState({ season: response})
         })
     }
     render() {
-        const {users} = this.state;
+        const {season} = this.state;
+       
         return (
             <div className="season">
                 
                 <div>
-                   {users.map(season => (
+                 
                        <Season
                      image={season.image} 
                      title= {season.title} 
                       description= {season.description} 
                        list={season.list} 
                     />
-                   ))}
+                
                 </div>
+               
             </div>
         )
     }

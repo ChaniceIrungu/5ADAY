@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
+   
     "migrate": "node model/database.js"
   },
   "dependencies": {
@@ -14,6 +15,9 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "mysql": "^2.18.1",
-    "nodemon": "^2.0.4"
+    "mysql2": "^2.1.0",
+    "nodemon": "^2.0.4",
+    "sequelize": "^5.21.10",
+    "sequelize-cli": "^5.5.1"
   }
 }

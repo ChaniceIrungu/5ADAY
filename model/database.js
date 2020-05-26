@@ -18,13 +18,26 @@ con.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
 
-  let sql = `DROP TABLE if exists tips; CREATE TABLE tips(id INT NOT NULL AUTO_INCREMENT, title varchar(255) NOT NULL, description varchar(255) NOT NULL, image varchar(255) NOT NULL, PRIMARY KEY (id));`;
-  co.query(sql, function (err, result) {
+  let sql = "DROP TABLE if exists 5aday; CREATE TABLE into seasons(id INT NOT NULL AUTO_INCREMENT, image VARCHAR(255) NOT NULL, title VARCHAR(255) NOT NULL, description VARCHAR(1000) NOT NULL, list VARCHAR(1000)NOT NULL, PRIMARY KEY (id));";
+  con.query(sql, function (err, result) {
     if (err) throw err;
-    console.log("Table creation `tips` was successful!");
+    console.log("Table creation `seasons` was successful!");
 
     console.log("Closing...");
   });
 
+  
+
   con.end();
 });
+
+
+
+
+
+
+
+
+
+
+

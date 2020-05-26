@@ -19,7 +19,8 @@ const Donut = ({data}) => {
           '#C9DE00',
           '#2FDE00',
           '#00A6B4',
-          '#6800B4'
+          '#6800B4',
+          "#878BB6"
         ],
         hoverBackgroundColor: [
         '#501800',

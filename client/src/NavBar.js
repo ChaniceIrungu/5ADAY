@@ -4,6 +4,7 @@ import {
     Switch,
     Route, 
     Link
+ 
     
   } from "react-router-dom";
   
@@ -29,36 +30,39 @@ return (
       </li>
       
     
-      <li className="nav-item dropdown">
-        <Link to="/season" className="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Seasons
-        </Link>
-        <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <Link to="/spring"className="dropdown-item" >Spring</Link>
-          <Link to="/summer" className="dropdown-item" >Summer</Link>
-          <Link to="/autumn" className="dropdown-item" >Autumn</Link>
-          <Link to="/winter" className="dropdown-item" >Winter</Link>
-        </div>
-      </li>
-     
-       
-     
       <li className="nav-item">
       <Link to="/nutrition" className="nav-link">Nutrition</Link>
       </li>
       <li className="nav-item">
       <Link to="/recipes" className="nav-link">Recipes</Link>
       </li>
+
+  
+      <li className="nav-item dropdown">
+        <Link to="/season" className="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Seasons
+        </Link>
+        <div className="dropdown-menu d-print" aria-labelledby="navbarDropdownMenuLink">
+          <Link to="/spring"className="dropdown-item" >Spring</Link>
+          <Link to="/summer" className="dropdown-item" >Summer</Link>
+          <Link to="/autumn" className="dropdown-item" >Autumn</Link>
+          <Link to="/winter" className="dropdown-item" >Winter</Link>
+        </div>
+      </li>
       
-
-     
-
 
      
     </ul>
   </div>
   
 </nav> 
+
+
+
+
+
+     
+
    </div>
    
  

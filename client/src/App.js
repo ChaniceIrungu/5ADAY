@@ -16,6 +16,7 @@ import ApiSeason from './ApiSeason';
 
 
 
+
 const App = () => {
   
 return (
@@ -40,19 +41,19 @@ return (
        </Route>
 
        <Route path="/spring">
-       <ApiSeason />
+       <ApiSeason id="2"/>
        </Route>
 
        <Route path="/summer">
-       <ApiSeason />
+       <ApiSeason id="3" />
        </Route>
 
        <Route path="/autumn">
-       <ApiSeason />
+       <ApiSeason id="4" />
        </Route>
 
        <Route path="/winter">
-       <ApiSeason />
+       <ApiSeason id="1"/>
        </Route>
        
         <Route path="/recipes">

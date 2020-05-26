@@ -14,7 +14,7 @@ return (
 <p className="card-text">{description}</p>
 
 
-      <ul className="card-text mt-4"><li>{list.replace(/,/g," ")}</li>
+      <ul className="card-text mt-4 font-weight-bold"><li>{list}</li>
       </ul>
 
       <img className="card-img-top" src={image} alt=""/>

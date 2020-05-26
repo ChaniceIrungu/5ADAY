@@ -1,5 +1,5 @@
 .App {
-    /* background-color: #282c34; */
+   
     min-height: 100vh;
     
    
@@ -41,11 +41,11 @@ font-size: 30px
 }
 
 .header {
-    /* margin: auto; */
-    width: 100%;
-    position: absolute;
-    padding: 5%;
+
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
    
-    font-size: 50px;
    
 }
+
