@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Introduction
 
-The app is designed for users who wants to eat better and have a better lifestyle. The users are able to track their nutritions and calories with the choosen ingredients, and they will also get a recipe and tips to have to be able to relax and improve their lifestyle. Feature will include a dashboard where the users can save the nutrition and calories data.
+The app is designed for users who wants to eat better and have a better lifestyle. The users are able to track their nutritions and calories with the choosen ingredients, and they will also get a recipe and tips to have to be able to relax and improve their lifestyle. Feature will include a dashboard where the users can save the nutrition and calories data, and a shopping list that allow users to add groceries to shopping list manually
 
 ## Available Scripts
 
