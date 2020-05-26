@@ -2,10 +2,10 @@
 
 5 a day and more... Reach your Goal 
 
-### Database Prep
+## Database
 
 - Access the MySQL interface in your terminal by running `mysql -u root -p`
-- Create a new database called 5aday: `create database 5aday` 
+- database is called 5aday
 - Table called seasons
 
 
