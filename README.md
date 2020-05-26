@@ -12,17 +12,9 @@
 ### Database Prep
 
 - Access the MySQL interface in your terminal by running `mysql -u root -p`
-- Create a new database called tips: `create database tips`
-- Add a `.env` file to the main folder of this repository containing the MySQL authentication information for MySQL user. For example:
+- Create a new database called 5aday: `create database 5aday` 
+- Table called seasons
 
-```bash
-  DB_HOST=localhost
-  DB_USER=root
-  DB_NAME=5ADAY
-  DB_PASS=YOURPASSWORD
-```
-
-- Run `npm run migrate` in the main folder of this repository, in a new terminal window. This will create a table in your database.
 
 ### Development
 
