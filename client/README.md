@@ -26,7 +26,7 @@ Open http://localhost:5000 to view the data in the browser.
 
 ### Database layout
 
-![db] (/db.jpg)
+![db](/db.jpg)
 
 ### `yarn start`
 
