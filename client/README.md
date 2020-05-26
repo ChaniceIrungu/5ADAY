@@ -26,7 +26,11 @@ Open http://localhost:5000 to view the data in the browser.
 
 ### Database layout
 
+DO NOT NPM MIGRATE, IT WILL DELETE THE TABLE CREATED
+
 table called seasons(id INT NOT NULL AUTO_INCREMENT, image VARCHAR(255) NOT NULL, title VARCHAR(255) NOT NULL, description VARCHAR(1000) NOT NULL, list VARCHAR(1000)NOT NULL, PRIMARY KEY (id))
+
+
 
 ### `yarn start`
 
