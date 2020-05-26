@@ -26,6 +26,8 @@ Open http://localhost:5000 to view the data in the browser.
 
 ### Database layout
 
+![dbdesigner](db.designer)
+
 ### `yarn start`
 
 Runs the app in the development mode.
