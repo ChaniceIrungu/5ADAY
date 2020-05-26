@@ -4,7 +4,7 @@ import Donut from './Donut'
 import './App.css';
 
 const API_ID = "a3b27ad9"
-const API_KEY = "99c842cbb72db8ad195589bb293374db	"
+const API_KEY = "99c842cbb72db8ad195589bb293374db"
 
 
 const ApiNutrition = () => {
@@ -32,7 +32,7 @@ useEffect( () => {
 
 const updateSubmit = e => {
     setSubmit(e.target.value)
-    // console.log(ingr)
+    
 }
 
 const getSubmit = e => {

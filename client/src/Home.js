@@ -8,17 +8,14 @@ const Home = () => {
     return (
       
         <div className="text-center bg-light">
+
+
 <h2 className="header">{header}</h2>
-  
-
-
-<img className="card-img-top" src={image} alt=""/>
+  <img className="card-img-top" src={image} alt=""/>
 
         
-        
-              
-            
-      </div>       
+     </div>   
+         
     )
 }
 

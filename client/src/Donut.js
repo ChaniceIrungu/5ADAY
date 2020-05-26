@@ -27,7 +27,7 @@ const Donut = ({data}) => {
         '#4B5000',
         '#175000',
         '#ffce56',
-      //   '#35014F'
+      
         ],
         data: data.map(e => (e?.quantity))
         

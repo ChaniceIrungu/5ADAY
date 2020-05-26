@@ -10,7 +10,7 @@ const Api = () => {
 
 const [recipes, setRecipes] = useState([]);
 const [search, setSearch] = useState('');
-const [query, setQuery] = useState('smoothies')
+const [query, setQuery] = useState('')
 
 
 useEffect(  () => {
@@ -51,6 +51,7 @@ const getSearch = e => {
          <textarea className="mt-4 form-control" type="text" rows="4" cols="50" placeholder="Ingredients list" value={search} onChange={updateSearch}/>
   <button className="mt-4 btn btn-info form-control" type="submit">Search</button>
        </form>
+
        <div className="recipes">
         {recipes.map(recipe => (
           <Recipe 
@@ -59,6 +60,8 @@ const getSearch = e => {
           ingredients={recipe.recipe.ingredients}calories={recipe.recipe.calories}
           />
         ))}
+
+        
         </div>
         </div>
         </div>
