@@ -26,7 +26,7 @@ Open http://localhost:5000 to view the data in the browser.
 
 ### Database layout
 
-![dbdesigner](dbdesigner.png)
+![dbdesigner](/dbdesigner.png)
 
 ### `yarn start`
 
