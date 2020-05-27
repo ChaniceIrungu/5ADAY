@@ -1,10 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 5ADAY
 
-### Introduction
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
-The app is designed for users who wants to eat better and have a better lifestyle. The users are able to track their nutritions and calories with the choosen ingredients, and they will also get a recipe and tips to have to be able to relax and improve their lifestyle. Feature will include a dashboard where the users can save the nutrition and calories data, and a shopping list that allow users to add groceries to shopping list manually
+## Introduction
 
-## Available Scripts
+The app is designed for users who wants to eat better and have a better lifestyle. The users are able to track their nutritions and calories with the choosen ingredients. They can also look for recipes, and check fruits and vegetables per seasons.
+Feature will include a dashboard where the users can save the nutrition and calories data, and a shopping list that allow users to add groceries to shopping list manually
+
+### Available Scripts
 
 In the project directory, you can run:
 
@@ -20,17 +23,17 @@ Run yarn start in project directory to start the Express server on port 5000.
 
 cd client and run yarn start to start the client server.
 
-Open http://localhost:3000 to view the client in the browser.
+Open [http://localhost:3000](http://localhost:3000)to view the client in the browser.
 
-Open http://localhost:5000 to view the data in the browser.
+Open [http://localhost:3000](http://localhost:5000) to view the data in the browser.
 
 ### Database layout
 
 DO NOT NPM MIGRATE, IT WILL DELETE THE TABLE CREATED
 
-table called seasons(id INT NOT NULL AUTO_INCREMENT, image VARCHAR(255) NOT NULL, title VARCHAR(255) NOT NULL, description VARCHAR(1000) NOT NULL, list VARCHAR(1000)NOT NULL, PRIMARY KEY (id))
+see table details on database.js
 
-
+route are on users.js file.
 
 ### `yarn start`
 
@@ -73,24 +76,21 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+This section has moved here: [React documentation](https://facebook.github.io/create-react-app/docs/code-splitting)
 
 ### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+This section has moved here: [React documentation](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
 ### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+This section has moved here: [React documentation](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
 ### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+This section has moved here: [React documentation](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+This section has moved here: [React documentation](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
