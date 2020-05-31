@@ -3,7 +3,7 @@ var router = express.Router();
 const db = require("../model/helper");
 
 getProducts = (req, res, next) => {
-  db(`SELECT * FROM products`)
+  db(`SELECT * FROM products;`)
     .then((results) => {
       res.send(results.data);
     })

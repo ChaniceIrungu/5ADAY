@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 export default function ShoppingList() {
   return (
@@ -51,7 +51,7 @@ export default function ShoppingList() {
           </article>
         </div>
       </section>
-      //cart
+      {/* cart */}
       <div class="class-overlay">
         <div class="cart">
           <span class="close-cart">
