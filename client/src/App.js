@@ -7,7 +7,7 @@ import ApiNutrition from "./ApiNutrition";
 import Home from "./Home";
 import NavBar from "./NavBar";
 import ApiSeason from "./ApiSeason";
-import ShoppingList from "./ShoppingList";
+import Cart from "./Cart";
 
 const App = () => {
   return (
@@ -16,11 +16,8 @@ const App = () => {
         <NavBar />
 
         <Switch>
-          <Route path="/ShoppingList">
-            <ShoppingList />
-          </Route>
-          <Route path="/home">
-            <Home />
+          <Route path="/Cart">
+            <Cart />
           </Route>
 
           <Route path="/season">
@@ -49,6 +46,9 @@ const App = () => {
 
           <Route path="/nutrition">
             <ApiNutrition />
+          </Route>
+          <Route path="/">
+            <Home />
           </Route>
         </Switch>
       </div>

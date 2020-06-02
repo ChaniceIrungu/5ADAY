@@ -2,20 +2,20 @@ var express = require("express");
 var router = express.Router();
 const db = require("../model/helper");
 
-getProducts = (req, res, next) => {
-  db(`SELECT * FROM products;`)
+getCarts = (req, res, next) => {
+  db(`SELECT * FROM carts;`)
     .then((results) => {
       res.send(results.data);
     })
     .catch((err) => res.status(500).send(err));
 };
 
-router.get("/", getProducts);
+router.get("/", getCarts);
 
 router.get("/:id", function (req, res, next) {
   const { id } = req.params;
 
-  db(`SELECT * FROM products WHERE id = ${id}`)
+  db(`SELECT * FROM carts WHERE id = ${id}`)
     .then((results) => {
       res.send(results.data[0]);
     })
@@ -23,19 +23,20 @@ router.get("/:id", function (req, res, next) {
 });
 
 router.post("/", function (req, res, next) {
-  const { title, price, image } = req.body;
+  const { quantity } = req.body;
+  const { productsId } = req.params;
   db(
-    `INSERT INTO products (title, price, image) VALUES ('${title}', '${price}', '${image}');`
+    `INSERT INTO products (productsId, quantity ) VALUES ('${productsId}', '${quantity}');`
   )
     .then(() => {
-      getProducts(req, res);
+      getCarts(req, res);
     })
     .catch((err) => res.status(500).send(err));
 });
 
 router.delete("/:id", function (req, res, next) {
   const { id } = req.params;
-  db(`DELETE FROM products WHERE id = ${id};`)
+  db(`DELETE FROM carts WHERE id = ${id};`)
     .then((results) => {
       res.send({ msg: "Your data was deleted correctly" });
     })

@@ -1,86 +1,51 @@
-const cartBtn = document.querySelector(".cart-btn");
-const CloseCartBtn = document.querySelector(".close-cart");
-const ClearCartBtn = document.querySelector(".clear-cart");
-const cartDOM = document.querySelector(".cart");
-const cartOverlay = document.querySelector(".cart-overlay");
-const cartItems = document.querySelector(".cart-items");
-const cartTotal = document.querySelector(".cart-total");
-const cartContent = document.querySelector(".cart-content");
-const productDOM = document.querySelector(".products-center");
+import React, { useState, useEffect } from "react";
 
-//cart
-let cart = [];
-//buttons
-let buttonsDOM = [];
+export default function Cart(props) {
+  const [products, setproducts] = useState([]);
+  const [carts, setcarts] = useState([]);
 
-//getting product
-class Products {
-  async getProducts() {
-    try {
-      let result = await fetch("products.js");
-      let data = await result.json();
-      let products = data.items;
-      products = products.map((item) => {
-        return { title, price, id, image };
+  useEffect(() => {
+    getProducts();
+  });
+
+  getProducts = () => {
+    fetch(`/products`)
+      .then((response) => response.json())
+      .then((response) => {
+        this.setState({ products: response });
       });
-      return products;
-    } catch (error) {
-      console.log(error);
-    }
-  }
-}
-
-//displau products
-class UI {
-  displayProducts(products) {
-    let result = "";
-    products.forEach((product) => {
-      result += `
-      <article class="product">
-        <div class="img-container">
-          <img src={image} alt="product" class="product-img"></img>
-          <button class="bag-btn" data-id={id}>
-            <i class="fas fa-shopping-cart"></i>
-            add to bag
-          </button>
-        </div>
-        <h3>{title}</h3>
-        <h4>{price}</h4>
-      </article>`;
+  };
+  // I want to return the products if they exist in db otherwis return an empty array. I dont know how to do this
+  //I also want to store the items of the cart if they exist
+  getCarts = () => {
+    fetch(`/Carts`)
+      .then((response) => response.json())
+      .then((response) => {
+        this.setState({ carts: response });
+      });
+  };
+  onInputChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    this.setState({
+      [name]: value,
     });
-    productDOM.innerHTML = result;
-  }
-  getBagButtons() {
+  };
+  getBagButtons = () => {
     const buttons = [...document.querySelectorAll(".bag-btn")];
     buttonsDOM = buttons;
-    buttons.forEach((button) => {
+    buttons.forEach = (button) => {
       let id = button.dataset.id;
       let inCart = cart.find((item) => item.id === id);
       if (inCart) {
         button.innerText = "In cart";
         button.disabled = true; //if button is in cart disable
       }
+    };
+  };
 
-      button.addEventListener("click", (event) => {
-        event.target.innerText = "In Cart";
-        event.target.disabled = true;
-        //get the product from products
-        let cartItem = { ...Storage.getProduct(id), amount: 1 };
-        //add product to cart
-        cart = [...cart, cartItem];
-        //save cart in local storage
-        Storage.saveCart(cart);
-        //set cart values
-        this.setCartValues(cart);
-        //dispaly cart items
-        this.addCartItem(cartItem);
-        //show the cart
-        this.showCart();
-      });
-    });
-  }
   //method for
-  setCartValues(cart) {
+  setCartValues = (cart) => {
     let tempTotal = 0;
     let itemsTotal = 0;
     //items are already added to cart
@@ -90,71 +55,86 @@ class UI {
     });
     cartTotal.innerText = parseFloat(tempTotal.toFixed(2)); //to decimals
     cartItems.innerText = itemsTotal;
-  }
-  addCartItem(item) {
-    const div = document.createElement("div");
-    div.classList.add("cart-item");
-    div.innerHTML = `<img src={image} alt="product"></img>
-    <div>
-      <h4>{title}</h4>
-      <h5>{{price}}</h5>
-      <span class="remove-item"//data-id={item.id} item>remove</span>
-    </div>
-    <div>
-      <i class="fas fa-chevron-up" data-id={item.id}></i>
-      <p class="item-amount" >${item.amount}</p>
-      <i class="fas fa-chevron-down" data-id={item.id}></i>
-    </div>`;
-    //THEN print cartContent div
-  }
-  showCart() {
-    cartOverlay.classList.add("transparentBcg");
-    cartDOM.classList.add("showCart");
-  }
-  //assign values to cart array
-  setupApp() {
-    cart = Storage.getCart();
-    this.setCartValues(cart);
-    this, populate(cart);
-    cartBtn.addEventListener("click", this, this.showCart);
-  }
-  populateCart(cart) {
-    cart.forEach((item) => this.addCartItem(item));
-  }
-}
-// local Storage- storing storage
-class Storage {
-  static saveProducts(products) {
-    localStorage.setItem("products".JSON.stringyfy(products));
-  }
-  static getProduct(id) {
-    let products = JSON.parse(localStorage.getItem("products"));
-    return products.find((product) => product.id === id);
-  }
-  static saveCart(cart) {
-    localStorage.setItem("cart".JSON.stringyfy(cart));
-  }
-  static getCart(cart) {
-    //? if this is true...item in the cart
-    return localStorage.getItem("cart")
-      ? JSON.parse(localStorage.getItem("cart"))
-      : [];
-  }
-}
-document.addEventListener("DOMContentLoaded", () => {
-  const ui = new UI();
-  const products = new Products();
-  // setup app ..call method
-  ui.setupApp();
+  };
 
-  //get all products
-  products
-    .getProducts()
-    .THEN((products) => {
-      ui.displayProducts(products);
-      Storage.saveProducts(products);
-    })
-    .THEN(() => {
-      ui.getBagButtons();
-    });
-});
+  return (
+    <div>
+      <nav class="navbar">
+        <div class="navbar-center">
+          <span class="nav-icon">
+            <i class="fas fa-bars"></i>
+          </span>
+          <div class="cart-btn">
+            <span class="nav-icon">
+              <i class="fas fa-cart-plus"></i>
+            </span>
+            <div class="cart-items">0</div>
+          </div>
+        </div>
+      </nav>
+      <header class="hero">
+        <div class="banner">
+          <h1 class="banner-title"> groceries collection</h1>
+          <button class="banner-btn">Shop Now</button>
+        </div>
+      </header>
+      <section class="products">
+        <div class="section-title">
+          <h2>groceries list</h2>
+        </div>
+        <div class="products-center">
+          <article class="product">
+            {products.map((product) => (
+              <div>
+                <div class="img-container">
+                  <img
+                    src={product.image}
+                    alt="product"
+                    class="product-img"
+                  ></img>
+                  <button class="bag-btn" data-id="1">
+                    <i class="fas fa-shopping-cart"></i>
+                    add to cart
+                  </button>
+                </div>
+                <h3>{product.title}</h3>
+                <h4>{product.price}</h4>
+              </div>
+            ))}
+          </article>
+        </div>
+      </section>
+      //cart
+      <div class="class-overlay">
+        <div class="cart">
+          <span class="close-cart">
+            <i class="fas fa-window-close"></i>
+          </span>
+          <h2>your cart</h2>
+          <div class="cart-content">
+            <div class="cart-item">
+              <img src="./orange.jpg" alt="product"></img>
+              <div>
+                <h4>juicy orange</h4>
+                <h5>$5</h5>
+                <span class="remove-item">remove</span>
+              </div>
+              <div>
+                <i class="fas fa-chevron-up"></i>
+                <p class="item-amount">1</p>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            {/* <!-- end of cart item --> */}
+          </div>
+          <div class="cart-footer">
+            <h3>
+              your total:$ <span class="cart-total">0</span>{" "}
+            </h3>
+            <button class="clear-cart banner-btn">clear cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
