@@ -50,3 +50,23 @@ con.connect(function (err) {
 
   con.end();
 });
+
+con.connect(function (err) {
+  if (err) throw err;
+  console.log("Connected!");
+
+  let sql = `CREATE TABLE if exists carts (
+	productID INT NOT NULL AUTO_INCREMENT,
+	Quantity INT NOT NULL
+);
+
+ALTER TABLE carts ADD CONSTRAINT carts_fk0 FOREIGN KEY (productID) REFERENCES carts();`;
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("Table creation `products` was successful!");
+
+    console.log("Closing...");
+  });
+
+  con.end();
+});
