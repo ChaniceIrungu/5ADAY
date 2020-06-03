@@ -7,7 +7,7 @@ import ApiNutrition from "./ApiNutrition";
 import Home from "./Home";
 import NavBar from "./NavBar";
 import ApiSeason from "./ApiSeason";
-import Cart from "./Cart";
+import ShoppingList from "./ShoppingList";
 
 const App = () => {
   return (
@@ -16,8 +16,8 @@ const App = () => {
         <NavBar />
 
         <Switch>
-          <Route path="/Cart">
-            <Cart />
+          <Route path="/ShoppingList">
+            <ShoppingList />
           </Route>
 
           <Route path="/season">

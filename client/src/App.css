@@ -81,6 +81,8 @@ nav {
 }
 .hero {
   min-height: calc(100vh - 60px);
+  background: url("https://www.juiceplus.com/content/juiceplusblog/en/2019/3/the-ultimate-fruit-and-vegetable-season-calendar/_jcr_content/par/image_1788290349.img.jpg/155317905")
+    center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,10 +211,10 @@ nav {
   background: rgb(231, 226, 221);
   padding: 1.5rem;
   transition: var(--mainTransition);
-  transform: translateX(100%);
+  /* transform: translateX(100%); */
 }
 .showCart {
-  transform: translateX(0);
+  /* transform: translateX(0); */
 }
 .transparentBcg {
   visibility: visible;

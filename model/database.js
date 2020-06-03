@@ -60,6 +60,7 @@ con.connect(function (err) {
 	Quantity INT NOT NULL
 );
 
+
 ALTER TABLE carts ADD CONSTRAINT carts_fk0 FOREIGN KEY (productID) REFERENCES carts();`;
   con.query(sql, function (err, result) {
     if (err) throw err;
